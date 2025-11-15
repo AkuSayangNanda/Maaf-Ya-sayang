@@ -15,11 +15,9 @@
             font-family: 'Georgia', 'Times New Roman', serif;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             padding: 20px;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
             position: relative;
         }
 
@@ -54,6 +52,8 @@
             max-width: 500px;
             position: relative;
             z-index: 10;
+            margin: 0 auto;
+            padding: 20px 0;
         }
 
         /* Surat tertutup */
@@ -168,7 +168,7 @@
             position: relative;
             display: none;
             animation: letterAppear 0.8s ease-out;
-            min-height: 500px;
+            margin-bottom: 20px;
         }
 
         .letter-opened.show {
@@ -233,6 +233,23 @@
             margin-top: 10px;
         }
 
+        /* Foto di bagian bawah surat */
+        .letter-photo {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px dashed #d4a574;
+        }
+
+        .letter-photo img {
+            max-width: 150px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 3px solid #d4a574;
+        }
+
         /* Kucing dekoratif di dalam surat */
         .cats-in-letter {
             display: flex;
@@ -264,6 +281,14 @@
         }
 
         @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 10px 0;
+            }
+
             .letter-title {
                 font-size: 1.4em;
             }
@@ -283,6 +308,14 @@
 
             .cat-decoration {
                 font-size: 3em;
+            }
+
+            .letter-opened {
+                padding: 30px 20px;
+            }
+
+            .letter-photo img {
+                max-width: 120px;
             }
         }
     </style>
@@ -342,6 +375,10 @@
             <div class="letter-signature">
                 <div>Dengan penuh cinta,</div>
                 <div class="name">💖</div>
+            </div>
+
+            <div class="letter-photo">
+                <img src="imam.jpg" alt="Foto" />
             </div>
         </div>
     </div>
